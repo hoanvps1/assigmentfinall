@@ -1,0 +1,27 @@
+c:\users\pc01\documents\visual studio 2012\Projects\Login\Login\bin\Debug\Login.exe.config
+C:\Users\PC01\Downloads\Login\Login\bin\Debug\Login.exe.config
+C:\Users\PC01\Downloads\Login\Login\bin\Debug\Login.exe
+C:\Users\PC01\Downloads\Login\Login\bin\Debug\Login.pdb
+C:\Users\PC01\Downloads\Login\Login\bin\Debug\Login.xml
+C:\Users\PC01\Downloads\Login\Login\obj\Debug\Login.Resources.resources
+C:\Users\PC01\Downloads\Login\Login\obj\Debug\Login.vbproj.GenerateResource.Cache
+C:\Users\PC01\Downloads\Login\Login\obj\Debug\Login.exe
+C:\Users\PC01\Downloads\Login\Login\obj\Debug\Login.xml
+C:\Users\PC01\Downloads\Login\Login\obj\Debug\Login.pdb
+C:\Users\PC01\Downloads\Login\Login\obj\Debug\Login.Login.resources
+C:\Users\PC01\Downloads\Login\Login\obj\Debug\Login.QLSP.resources
+C:\Users\Admin\Downloads\phan mem\New folder\Login\Login\bin\Debug\Login.exe.config
+C:\Users\Admin\Downloads\phan mem\New folder\Login\Login\obj\Debug\Login.exe
+C:\Users\Admin\Downloads\phan mem\New folder\Login\Login\obj\Debug\Login.xml
+C:\Users\Admin\Downloads\phan mem\New folder\Login\Login\obj\Debug\Login.pdb
+C:\Users\Admin\Downloads\phan mem\New folder\Login\Login\bin\Debug\Login.exe
+C:\Users\Admin\Downloads\phan mem\New folder\Login\Login\bin\Debug\Login.pdb
+C:\Users\Admin\Downloads\phan mem\New folder\Login\Login\bin\Debug\Login.xml
+C:\Users\Admin\Downloads\phan mem\New folder\Login\Login\obj\Debug\Login.Login.resources
+C:\Users\Admin\Downloads\phan mem\New folder\Login\Login\obj\Debug\Login.Resources.resources
+C:\Users\Admin\Downloads\phan mem\New folder\Login\Login\obj\Debug\Login.vbproj.GenerateResource.Cache
+C:\Users\Admin\Downloads\phan mem\New folder\Login\Login\obj\Debug\Login.index.resources
+C:\Users\Admin\Downloads\phan mem\New folder\Login\Login\obj\Debug\Login.nhanvien.resources
+C:\Users\Admin\Downloads\phan mem\New folder\Login\Login\obj\Debug\Login.spham.resources
+C:\Users\Admin\Downloads\phan mem\New folder\Login\Login\obj\Debug\Login.kh.resources
+C:\Users\Admin\Downloads\phan mem\New folder\Login\Login\obj\Debug\Login.hd.resources
