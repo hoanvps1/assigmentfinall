@@ -5,23 +5,23 @@ Public Class nhanvien
     Dim dulieu As New DataTable
 
     Private Sub them_Click(sender As Object, e As EventArgs) Handles them.Click
-          Dim truycap As SqlConnection = New SqlConnection(ketnoidl_somee)
-        Dim chitietdl4 As String = " insert into from NhanVien values(@MaNhanVien, @TenDangNhap, @MatKhau) "
-        Dim Executequery1 As New SqlCommand(chitietdl4, truycap)
-        truycap.Open()
-        Executequery1.Parameters.AddWithValue("@MaNhanVien", txt1.Text)
-        Executequery1.Parameters.AddWithValue("@TenDangNhap",txt2.Text)
-        Executequery1.Parameters.AddWithValue("@MatKhau", txt3.Text)
-        Executequery1.ExecuteNonQuery()
-        MessageBox.Show("Đã Thêm")
-        'làm mới
-        Dim refresh As SqlDataAdapter = New SqlDataAdapter("select * from NhanVien", truycap)
+        Dim lienket As SqlConnection = New SqlConnection(ketnoidl_somee)
+        Dim lenhinsert_1 As String = "insert into NhanVien values (@MaNhanVien,@TenDangNhap,@MatKhau)"
+        Dim cmd_1 As New SqlCommand(lenhinsert_1, lienket)
+        lienket.Open()
+        cmd_1.Parameters.AddWithValue("@MaNhanVien", txt1.Text)
+        cmd_1.Parameters.AddWithValue("@TenDangNhap", txt2.Text)
+        cmd_1.Parameters.AddWithValue("@MatKhau", txt3.Text)
+        cmd_1.ExecuteNonQuery()
+        lienket.Close()
+        MessageBox.Show("Thêm thành công")
+        'Làm mới bảng
+        Dim newrf_1 As SqlDataAdapter = New SqlDataAdapter("select * from NhanVien", lienket)
         dulieu.Clear()
-        refresh.Fill(dulieu)
-        thongbaonv.DataSource = dulieu
-
+        newrf_1.Fill(dulieu)
+        thongbaonv.DataSource = dulieu.DefaultView
     End Sub
-
+    'form Load
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim truycap As SqlConnection = New SqlConnection(ketnoidl_somee)
         Dim truyvandl As SqlDataAdapter = New SqlDataAdapter("select * from NhanVien", truycap)
@@ -40,47 +40,44 @@ Public Class nhanvien
         txt3.Text = thongbaonv.Item(2, index).Value
        
     End Sub
-
+    'Su kien nút sữa
     Private Sub sua_Click(sender As Object, e As EventArgs) Handles sua.Click
-        Dim truycap As SqlConnection = New SqlConnection(ketnoidl_somee)
-        Dim chitietdl3 As String = "Update NhanVien Set values MaNhanVIen=@MaNhanVien,TenDangNhap=@TenDangNhap,MatKhau=@MatKhau"
-        Dim Executetruyvan2 As New SqlCommand(chitietdl3, truycap)
-        truycap.Open()
-        ExecuteTruyvan2.Parameters.AddWithValue("@MaNhanVien", txt1.Text)
-        ExecuteTruyvan2.Parameters.AddWithValue("@TenDangNhap", txt2.Text)
-        ExecuteTruyvan2.Parameters.AddWithValue("@MatKhau", txt3.Text)
-
-        'Chạy các câu truy vấn
-        MessageBox.Show("Sửa thành công")
-        'Làm mới
-        Dim refresh As SqlDataAdapter = New SqlDataAdapter("select * from NhanVien", truycap)
+        Dim lienket As SqlConnection = New SqlConnection(ketnoidl_somee)
+        Dim lenhinsert_2 As String = "UPDATE NhanVien Set MaNhanVien=@MaNhanVien, TenDangNhap=@TenDangNhap, MatKhau=@MatKhau"
+        Dim cmd_2 As New SqlCommand(lenhinsert_2, lienket)
+        lienket.Open()
+        cmd_2.Parameters.AddWithValue("@MaNhanVien", txt1.Text)
+        cmd_2.Parameters.AddWithValue("@TenDangNhap", txt2.Text)
+        cmd_2.Parameters.AddWithValue("@MatKhau", txt3.Text)
+        cmd_2.ExecuteNonQuery()
+        lienket.Close()
+        MessageBox.Show("Sửa xong")
+        Dim newrf As SqlDataAdapter = New SqlDataAdapter("select * from NhanVien", lienket)
         dulieu.Clear()
-        refresh.Fill(dulieu)
-        thongbaonv.DataSource = dulieu
-
+        newrf.Fill(dulieu)
+        thongbaonv.DataSource = dulieu.DefaultView
     End Sub
-
+    'Sự kiện nút xóa
     Private Sub xoa_Click(sender As Object, e As EventArgs) Handles xoa.Click
-        Dim truycap As SqlConnection = New SqlConnection(ketnoidl_somee)
-        Dim chitietdl4 As String = " delete from NhanVien Where MaNhanVien=@MaNhanVien"
-        Dim Executequery3 As New SqlCommand(chitietdl4, truycap)
-        truycap.Open()
-        Executequery3.Parameters.AddWithValue("@MaNhanVien", txt1.Text)
-        Executequery3.ExecuteNonQuery()
-        MessageBox.Show("Đã Xóa")
-        'làm mới
-        Dim refresh As SqlDataAdapter = New SqlDataAdapter("select * from NhanVien", truycap)
+               Dim lienket As SqlConnection = New SqlConnection(ketnoidl_somee)
+        Dim lenhinsert_3 As String = "delete  from NhanVien Where MaNhanVien=@MaNhanVien"
+        Dim cmd_3 As New SqlCommand(lenhinsert_3, lienket)
+        lienket.Open()
+        cmd_3.Parameters.AddWithValue("@MaNhanVien", txt1.Text)
+        cmd_3.ExecuteNonQuery()
+        lienket.Close()
+        MessageBox.Show("Xóa Xong")
+        Dim Newrf As SqlDataAdapter = New SqlDataAdapter("select * from NhanVien", lienket)
         dulieu.Clear()
-        refresh.Fill(dulieu)
-        thongbaonv.DataSource = dulieu
-
+        Newrf.Fill(dulieu)
+        thongbaonv.DataSource = dulieu.DefaultView
     End Sub
-
+    'Đồng hồ
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        ToolStripStatusLabel1.Text = TimeOfDay
+        Timer1.Start()
     End Sub
 
     Private Sub ToolStripStatusLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripStatusLabel1.Click
-
+        ToolStripStatusLabel1.Text = TimeOfDay
     End Sub
 End Class

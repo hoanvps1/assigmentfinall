@@ -58,7 +58,7 @@ Partial Class nhanvien
         Me.GroupBox1.Controls.Add(Me.user)
         Me.GroupBox1.Controls.Add(Me.manhanvien)
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.GroupBox1.Location = New System.Drawing.Point(199, 36)
+        Me.GroupBox1.Location = New System.Drawing.Point(193, 26)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(435, 99)
         Me.GroupBox1.TabIndex = 37
@@ -123,7 +123,7 @@ Partial Class nhanvien
         '
         Me.thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.thoat.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.thoat.Location = New System.Drawing.Point(333, 19)
+        Me.thoat.Location = New System.Drawing.Point(403, 19)
         Me.thoat.Name = "thoat"
         Me.thoat.Size = New System.Drawing.Size(26, 23)
         Me.thoat.TabIndex = 39
@@ -171,9 +171,9 @@ Partial Class nhanvien
         Me.GroupBox2.Controls.Add(Me.xoa)
         Me.GroupBox2.Controls.Add(Me.them)
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.GroupBox2.Location = New System.Drawing.Point(266, 141)
+        Me.GroupBox2.Location = New System.Drawing.Point(193, 141)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(368, 49)
+        Me.GroupBox2.Size = New System.Drawing.Size(435, 49)
         Me.GroupBox2.TabIndex = 38
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Menu"
@@ -183,16 +183,16 @@ Partial Class nhanvien
         Me.thongbaonv.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.thongbaonv.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.thongbaonv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.thongbaonv.Location = New System.Drawing.Point(199, 206)
+        Me.thongbaonv.Location = New System.Drawing.Point(12, 196)
         Me.thongbaonv.Name = "thongbaonv"
-        Me.thongbaonv.Size = New System.Drawing.Size(435, 123)
+        Me.thongbaonv.Size = New System.Drawing.Size(616, 133)
         Me.thongbaonv.TabIndex = 36
         '
         'PictureBox4
         '
         Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(31, 67)
+        Me.PictureBox4.Location = New System.Drawing.Point(31, 36)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(122, 123)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -228,7 +228,7 @@ Partial Class nhanvien
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.thongbaonv)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "nhanvien"
         Me.Text = "Bảng Nhân Viên"
         Me.GroupBox1.ResumeLayout(False)

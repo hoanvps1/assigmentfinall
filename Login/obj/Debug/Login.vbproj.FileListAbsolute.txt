@@ -25,3 +25,27 @@ C:\Users\Admin\Downloads\phan mem\New folder\Login\Login\obj\Debug\Login.nhanvie
 C:\Users\Admin\Downloads\phan mem\New folder\Login\Login\obj\Debug\Login.spham.resources
 C:\Users\Admin\Downloads\phan mem\New folder\Login\Login\obj\Debug\Login.kh.resources
 C:\Users\Admin\Downloads\phan mem\New folder\Login\Login\obj\Debug\Login.hd.resources
+C:\Users\Admin\Downloads\phan mem\New folder\qlsp\Login\bin\Debug\Login.exe.config
+C:\Users\Admin\Downloads\phan mem\New folder\qlsp\Login\obj\Debug\Login.exe
+C:\Users\Admin\Downloads\phan mem\New folder\qlsp\Login\obj\Debug\Login.xml
+C:\Users\Admin\Downloads\phan mem\New folder\qlsp\Login\obj\Debug\Login.pdb
+C:\Users\Admin\Downloads\qlsp\Login\bin\Debug\Login.exe.config
+C:\Users\Admin\Downloads\qlsp\Login\obj\Debug\Login.exe
+C:\Users\Admin\Downloads\qlsp\Login\obj\Debug\Login.xml
+C:\Users\Admin\Downloads\qlsp\Login\obj\Debug\Login.pdb
+C:\Users\Admin\Downloads\qlsp\Login\obj\Debug\Login.hd.resources
+C:\Users\Admin\Downloads\qlsp\Login\obj\Debug\Login.kh.resources
+C:\Users\Admin\Downloads\qlsp\Login\obj\Debug\Login.spham.resources
+C:\Users\Admin\Downloads\qlsp\Login\obj\Debug\Login.nhanvien.resources
+C:\Users\Admin\Downloads\qlsp\Login\obj\Debug\Login.index.resources
+C:\Users\Admin\Downloads\qlsp\Login\obj\Debug\Login.Login.resources
+C:\Users\Admin\Downloads\qlsp\Login\obj\Debug\Login.Resources.resources
+C:\Users\Admin\Downloads\qlsp\Login\obj\Debug\Login.vbproj.GenerateResource.Cache
+C:\Users\Admin\Downloads\qlsp\Login\bin\Debug\Login.exe
+C:\Users\Admin\Downloads\qlsp\Login\bin\Debug\Login.pdb
+C:\Users\Admin\Downloads\qlsp\Login\bin\Debug\Login.xml
+C:\Users\Admin\Downloads\qlsp\Login\obj\Debug\Interop.WMPLib.dll
+C:\Users\Admin\Downloads\qlsp\Login\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Admin\Downloads\qlsp\Login\obj\Debug\Login.vbproj.ResolveComReference.cache
+C:\Users\Admin\Downloads\qlsp\Login\bin\Debug\Interop.WMPLib.dll
+C:\Users\Admin\Downloads\qlsp\Login\bin\Debug\AxInterop.WMPLib.dll

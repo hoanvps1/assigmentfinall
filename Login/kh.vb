@@ -9,66 +9,52 @@ Class kh
 
         truycap.Open()
         truyvandl1.Fill(dulieu)
-        thongbao.DataSource = dulieu.DefaultView
-
-   
-   
-
-  
+        thongbaokh.DataSource = dulieu.DefaultView
 
     End Sub
     Private Sub them_Click(sender As Object, e As EventArgs) Handles them.Click
-        'ket noi toi DB Somee qua chuoi Connectstr)
-        Dim truycap As New SqlConnection(ketnoidl_somee)
-        'truy van de sua chua du lieu theo ma
-        Dim stradd As String = "Insert into Khach_hang Values (@Ma_KH, @HoTen_KH, @SoDT_KH , @DiaChi_KH)"
-        Dim dl1 As New SqlCommand(stradd, truycap)
-        'add du lieu vao
-        dl1.Parameters.AddWithValue("@Ma_KH", txt1.Text)
-        dl1.Parameters.AddWithValue("@HoTen_KH", txt2.Text)
-        dl1.Parameters.AddWithValue("@SoDT_KH", txt3.Text)
-        dl1.Parameters.AddWithValue("@DiaChi_KH", txt4.Text)
-        'Thuc Thi cau lenh va sua chua trong DB
-        dl1.ExecuteNonQuery()
-        MessageBox.Show("Đã thêm")
-        Dim dl2 As SqlDataAdapter = New SqlDataAdapter(" select * from Khach_hang", truycap)
-
-        'Load sp
+        Dim lienket As SqlConnection = New SqlConnection(ketnoidl_somee)
+        Dim lenhinsert_1 As String = "insert into Khach_Hang values (@Ma_KH,@HoTen_KH,@SoDT_KH,@DiaChi_KH)"
+        Dim cmd_1 As New SqlCommand(lenhinsert_1, lienket)
+        lienket.Open()
+        cmd_1.Parameters.AddWithValue("@Ma_KH", txt1.Text)
+        cmd_1.Parameters.AddWithValue("@HoTen_KH", txt2.Text)
+        cmd_1.Parameters.AddWithValue("@SoDT_KH", txt3.Text)
+        cmd_1.Parameters.AddWithValue("@DiaChi_KH", txt4.Text)
+        cmd_1.ExecuteNonQuery()
+        lienket.Close()
+        MessageBox.Show("Thêm thành công")
+        'Làm mới bảng
+        Dim newrf_1 As SqlDataAdapter = New SqlDataAdapter("select * from Khach_Hang", lienket)
         dulieu.Clear()
-        dl2.Fill(dulieu)
-        thongbao.DataSource = dulieu.DefaultView
+        newrf_1.Fill(dulieu)
+        thongbaokh.DataSource = dulieu.DefaultView
     End Sub
 
-    Private Sub thongbao_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles thongbao.CellContentClick
-        Dim index As Integer = thongbao.CurrentCell.RowIndex
-
-        txt1.Text = thongbao.Item(1, index).Value
-        txt2.Text = thongbao.Item(2, index).Value
-        txt3.Text = thongbao.Item(3, index).Value
-        txt4.Text = thongbao.Item(4, index).Value
+    Private Sub thongbaokh_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles thongbaokh.CellContentClick
+        Dim index As Integer = thongbaokh.CurrentCell.RowIndex
+        txt1.Text = thongbaokh.Item(0, index).Value
+        txt2.Text = thongbaokh.Item(1, index).Value
+        txt3.Text = thongbaokh.Item(2, index).Value
+        txt4.Text = thongbaokh.Item(3, index).Value
     End Sub
 
     Private Sub sua_Click(sender As Object, e As EventArgs) Handles sua.Click
-        'ket noi toi DB Somee qua chuoi Connectstr)
-        Dim truycap As New SqlConnection(ketnoidl_somee)
-        'truy van de sua chua du lieu theo ma
-        Dim stradd As String = "UPDATE Khach_Hang =@Ma_KH, HoTen_KH = @HoTen_KH, SoDT_KH = @SoDT_KH, DiaChi_KH = @DiaChi_KH"
-        Dim dl2 As New SqlCommand(stradd, truycap)
-        'add du lieu vao
-        dl2.Parameters.AddWithValue("@Ma_KH", txt1.Text)
-        dl2.Parameters.AddWithValue("@HoTen_KH", txt2.Text)
-        dl2.Parameters.AddWithValue("@SoDT_KH", txt3.Text)
-        dl2.Parameters.AddWithValue("@DiaChi_KH", txt4.Text)
-
-
-        'Thuc Thi cau lenh va sua chua trong DB
-        dl2.ExecuteNonQuery()
-        'close ket noi
+         Dim lienket As SqlConnection = New SqlConnection(ketnoidl_somee)
+        Dim lenhinsert_2 As String = "UPDATE Khach_Hang Set HoTen_KH=@HoTen_KH,SoDT_KH=@SoDT_KH,DiaChi_KH=@DiaChi_KH where Ma_KH=@Ma_KH"
+        Dim cmd_2 As New SqlCommand(lenhinsert_2, lienket)
+        lienket.Open()
+        cmd_2.Parameters.AddWithValue("@Ma_KH", txt1.Text)
+        cmd_2.Parameters.AddWithValue("@HoTen_KH", txt2.Text)
+        cmd_2.Parameters.AddWithValue("@SoDT_KH", txt3.Text)
+        cmd_2.Parameters.AddWithValue("@DiaChi_KH", txt4.Text)
+        cmd_2.ExecuteNonQuery()
+        lienket.Close()
         MessageBox.Show("Sửa xong")
-        Dim lammoi As SqlDataAdapter = New SqlDataAdapter("select * from Khach_Hang", truycap)
+        Dim newrf As SqlDataAdapter = New SqlDataAdapter("select * from Khac_Hang", lienket)
         dulieu.Clear()
-        lammoi.Fill(dulieu)
-        thongbao.DataSource = dulieu.DefaultView
+        newrf.Fill(dulieu)
+        thongbaokh.DataSource = dulieu.DefaultView
     End Sub
 
     Private Sub thoat_Click(sender As Object, e As EventArgs) Handles thoat.Click
@@ -77,17 +63,17 @@ Class kh
     End Sub
 
     Private Sub xoa_Click(sender As Object, e As EventArgs) Handles xoa.Click
-        Dim truycap As SqlConnection = New SqlConnection(ketnoidl_somee)
-        Dim chitietdl4 As String = "delete  from Khach_Hang Where Ma_KH=@MMa_KH"
-        Dim dl3 As New SqlCommand(chitietdl4, truycap)
-        truycap.Open()
-        dl3.Parameters.AddWithValue("@Ma_KH", txt1.Text)
-        dl3.ExecuteNonQuery()
-        MessageBox.Show("Đã Xóa")
-        'làm mới
-        Dim lammoi As SqlDataAdapter = New SqlDataAdapter("select * from SanPham", truycap)
+        Dim lienket As SqlConnection = New SqlConnection(ketnoidl_somee)
+        Dim lenhinsert_3 As String = "delete  from Khach_Hang Where Ma_KH=@Ma_KH"
+        Dim cmd_3 As New SqlCommand(lenhinsert_3, lienket)
+        lienket.Open()
+        cmd_3.Parameters.AddWithValue("@Ma_KH", txt1.Text)
+        cmd_3.ExecuteNonQuery()
+        lienket.Close()
+        MessageBox.Show("Xóa Xong")
+        Dim Newrf As SqlDataAdapter = New SqlDataAdapter("select * from Ma_KH", lienket)
         dulieu.Clear()
-        lammoi.Fill(dulieu)
-        thongbao.DataSource = dulieu.DefaultView
+        Newrf.Fill(dulieu)
+        thongbaokh.DataSource = dulieu.DefaultView
     End Sub
 End Class

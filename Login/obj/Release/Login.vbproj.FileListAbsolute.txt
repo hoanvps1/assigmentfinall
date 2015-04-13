@@ -1,1 +1,16 @@
 C:\Users\Admin\Downloads\phan mem\New folder\Login\Login\bin\Release\Login.exe.config
+C:\Users\Admin\Downloads\qlsp\Login\bin\Release\Login.exe.config
+C:\Users\Admin\Downloads\qlsp\Login\bin\Release\Login.exe
+C:\Users\Admin\Downloads\qlsp\Login\bin\Release\Login.pdb
+C:\Users\Admin\Downloads\qlsp\Login\bin\Release\Login.xml
+C:\Users\Admin\Downloads\qlsp\Login\obj\Release\Login.hd.resources
+C:\Users\Admin\Downloads\qlsp\Login\obj\Release\Login.kh.resources
+C:\Users\Admin\Downloads\qlsp\Login\obj\Release\Login.spham.resources
+C:\Users\Admin\Downloads\qlsp\Login\obj\Release\Login.nhanvien.resources
+C:\Users\Admin\Downloads\qlsp\Login\obj\Release\Login.index.resources
+C:\Users\Admin\Downloads\qlsp\Login\obj\Release\Login.Login.resources
+C:\Users\Admin\Downloads\qlsp\Login\obj\Release\Login.Resources.resources
+C:\Users\Admin\Downloads\qlsp\Login\obj\Release\Login.vbproj.GenerateResource.Cache
+C:\Users\Admin\Downloads\qlsp\Login\obj\Release\Login.exe
+C:\Users\Admin\Downloads\qlsp\Login\obj\Release\Login.xml
+C:\Users\Admin\Downloads\qlsp\Login\obj\Release\Login.pdb

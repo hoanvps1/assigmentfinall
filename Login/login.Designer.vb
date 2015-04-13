@@ -32,8 +32,8 @@ Partial Class Login
         Me.pass = New System.Windows.Forms.TextBox()
         Me.user = New System.Windows.Forms.TextBox()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -54,7 +54,7 @@ Partial Class Login
         Me.thoat.BackColor = System.Drawing.Color.Transparent
         Me.thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.thoat.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.thoat.Location = New System.Drawing.Point(452, 6)
+        Me.thoat.Location = New System.Drawing.Point(453, 6)
         Me.thoat.Name = "thoat"
         Me.thoat.Size = New System.Drawing.Size(23, 21)
         Me.thoat.TabIndex = 12
@@ -115,7 +115,7 @@ Partial Class Login
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 111)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(476, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(483, 22)
         Me.StatusStrip1.TabIndex = 14
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -125,12 +125,15 @@ Partial Class Login
         Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(49, 17)
         Me.ToolStripStatusLabel1.Text = "00:00:00"
         '
+        'Timer1
+        '
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(476, 133)
+        Me.ClientSize = New System.Drawing.Size(483, 133)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.xoa)
         Me.Controls.Add(Me.thoat)
@@ -139,7 +142,7 @@ Partial Class Login
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.pass)
         Me.Controls.Add(Me.user)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Login"
         Me.Text = "Bảng Đăng Nhập"
         Me.StatusStrip1.ResumeLayout(False)

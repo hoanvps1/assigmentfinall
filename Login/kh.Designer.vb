@@ -22,10 +22,10 @@ Partial Class kh
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(kh))
         Me.txt2 = New System.Windows.Forms.TextBox()
-        Me.thongbao = New System.Windows.Forms.DataGridView()
+        Me.thongbaokh = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txt1 = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -40,7 +40,7 @@ Partial Class kh
         Me.xoa = New System.Windows.Forms.Button()
         Me.them = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.thongbao, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.thongbaokh, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -56,19 +56,19 @@ Partial Class kh
         Me.txt2.Size = New System.Drawing.Size(100, 20)
         Me.txt2.TabIndex = 3
         '
-        'thongbao
+        'thongbaokh
         '
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.thongbao.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.thongbao.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
-        Me.thongbao.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.thongbao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.thongbao.Location = New System.Drawing.Point(156, 12)
-        Me.thongbao.Name = "thongbao"
-        Me.thongbao.Size = New System.Drawing.Size(326, 192)
-        Me.thongbao.TabIndex = 5
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Transparent
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.thongbaokh.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
+        Me.thongbaokh.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        Me.thongbaokh.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.thongbaokh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.thongbaokh.Location = New System.Drawing.Point(156, 12)
+        Me.thongbaokh.Name = "thongbaokh"
+        Me.thongbaokh.Size = New System.Drawing.Size(326, 192)
+        Me.thongbaokh.TabIndex = 5
         '
         'GroupBox1
         '
@@ -225,12 +225,12 @@ Partial Class kh
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.thongbao)
-        Me.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Controls.Add(Me.thongbaokh)
+        Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "kh"
         Me.Text = "Form1"
-        CType(Me.thongbao, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.thongbaokh, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -245,7 +245,7 @@ Partial Class kh
 
     End Sub
     Friend WithEvents txt2 As System.Windows.Forms.TextBox
-    Friend WithEvents thongbao As System.Windows.Forms.DataGridView
+    Friend WithEvents thongbaokh As System.Windows.Forms.DataGridView
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents txt1 As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox

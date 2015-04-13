@@ -25,9 +25,7 @@ Partial Class spham
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(spham))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.cbx = New System.Windows.Forms.ComboBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txt6 = New System.Windows.Forms.TextBox()
+        Me.txt1 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txt2 = New System.Windows.Forms.TextBox()
@@ -42,22 +40,20 @@ Partial Class spham
         Me.sua = New System.Windows.Forms.Button()
         Me.xoa = New System.Windows.Forms.Button()
         Me.them = New System.Windows.Forms.Button()
-        Me.thongbao = New System.Windows.Forms.DataGridView()
+        Me.thongbaosp = New System.Windows.Forms.DataGridView()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.thongbao, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.thongbaosp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.Controls.Add(Me.cbx)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.txt6)
+        Me.GroupBox1.Controls.Add(Me.txt1)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.txt2)
@@ -70,36 +66,17 @@ Partial Class spham
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GroupBox1.Location = New System.Drawing.Point(320, 18)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(310, 195)
+        Me.GroupBox1.Size = New System.Drawing.Size(310, 149)
         Me.GroupBox1.TabIndex = 42
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Các giá trị"
         '
-        'cbx
+        'txt1
         '
-        Me.cbx.FormattingEnabled = True
-        Me.cbx.Location = New System.Drawing.Point(151, 17)
-        Me.cbx.Name = "cbx"
-        Me.cbx.Size = New System.Drawing.Size(121, 21)
-        Me.cbx.TabIndex = 47
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label6.Location = New System.Drawing.Point(6, 149)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(85, 13)
-        Me.Label6.TabIndex = 46
-        Me.Label6.Text = "Chi tiết và mã số"
-        '
-        'txt6
-        '
-        Me.txt6.Location = New System.Drawing.Point(151, 146)
-        Me.txt6.Name = "txt6"
-        Me.txt6.Size = New System.Drawing.Size(278, 20)
-        Me.txt6.TabIndex = 45
+        Me.txt1.Location = New System.Drawing.Point(151, 17)
+        Me.txt1.Name = "txt1"
+        Me.txt1.Size = New System.Drawing.Size(278, 20)
+        Me.txt1.TabIndex = 47
         '
         'Label5
         '
@@ -108,9 +85,9 @@ Partial Class spham
         Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label5.Location = New System.Drawing.Point(6, 120)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(88, 13)
+        Me.Label5.Size = New System.Drawing.Size(79, 13)
         Me.Label5.TabIndex = 44
-        Me.Label5.Text = "Chi tiết sản phẩm"
+        Me.Label5.Text = "Loại Sản Phẩm"
         '
         'Label4
         '
@@ -243,15 +220,15 @@ Partial Class spham
         Me.them.Text = "Thêm"
         Me.them.UseVisualStyleBackColor = True
         '
-        'thongbao
+        'thongbaosp
         '
-        Me.thongbao.BackgroundColor = System.Drawing.Color.White
-        Me.thongbao.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.thongbao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.thongbao.Location = New System.Drawing.Point(12, 18)
-        Me.thongbao.Name = "thongbao"
-        Me.thongbao.Size = New System.Drawing.Size(302, 195)
-        Me.thongbao.TabIndex = 41
+        Me.thongbaosp.BackgroundColor = System.Drawing.Color.White
+        Me.thongbaosp.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.thongbaosp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.thongbaosp.Location = New System.Drawing.Point(12, 18)
+        Me.thongbaosp.Name = "thongbaosp"
+        Me.thongbaosp.Size = New System.Drawing.Size(302, 195)
+        Me.thongbaosp.TabIndex = 41
         '
         'StatusStrip1
         '
@@ -280,14 +257,14 @@ Partial Class spham
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.thongbao)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Controls.Add(Me.thongbaosp)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "spham"
         Me.Text = "Bảng Quản Lý Sản Phẩm"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
-        CType(Me.thongbao, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.thongbaosp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -309,11 +286,9 @@ Partial Class spham
     Friend WithEvents sua As System.Windows.Forms.Button
     Friend WithEvents xoa As System.Windows.Forms.Button
     Friend WithEvents them As System.Windows.Forms.Button
-    Friend WithEvents thongbao As System.Windows.Forms.DataGridView
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents txt6 As System.Windows.Forms.TextBox
-    Friend WithEvents cbx As System.Windows.Forms.ComboBox
+    Friend WithEvents thongbaosp As System.Windows.Forms.DataGridView
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents txt1 As System.Windows.Forms.TextBox
 End Class

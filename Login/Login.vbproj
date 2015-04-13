@@ -71,6 +71,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="index.Designer.vb">
+      <DependentUpon>index.vb</DependentUpon>
+    </Compile>
+    <Compile Include="index.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="hd.Designer.vb">
       <DependentUpon>hd.vb</DependentUpon>
     </Compile>
@@ -93,12 +99,6 @@
       <DependentUpon>nv.vb</DependentUpon>
     </Compile>
     <Compile Include="nv.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="index.Designer.vb">
-      <DependentUpon>index.vb</DependentUpon>
-    </Compile>
-    <Compile Include="index.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="login.vb">
@@ -125,6 +125,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="index.resx">
+      <DependentUpon>index.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="hd.resx">
       <DependentUpon>hd.vb</DependentUpon>
     </EmbeddedResource>
@@ -137,9 +140,6 @@
     <EmbeddedResource Include="nv.resx">
       <DependentUpon>nv.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="index.resx">
-      <DependentUpon>index.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>
     </EmbeddedResource>
@@ -151,7 +151,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -162,6 +161,25 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
